@@ -19,7 +19,14 @@ export class Stores {
       state: 'Tamil Nadu',
       manager: 'xxxxx xxxx',
       phone: '+91 xxxxx xxxxx',
-      status: 'Active'
+      status: 'Active',
+      hubs: [
+        { name: 'Hub 1', city: 'Chennai' },
+        { name: 'Hub 2', city: 'Chennai' }
+      ],
+      depots: [
+        { name: 'Depot', city: 'Chennai' }
+      ]
     },
     {
       name: 'Store 2',
@@ -27,7 +34,14 @@ export class Stores {
       state: 'Andhra Pradesh',
       manager: 'xxxxx xxxx',
       phone: '+91 xxxxx xxxxx',
-      status: 'Active'
+      status: 'Active',
+      hubs: [
+        { name: 'Hub 1', city: 'Hyderabad' },
+        { name: 'Hub 2', city: 'Hyderabad' }
+      ],
+      depots: [
+        { name: 'Depot', city: 'Hyderabad' }
+      ]
     },
     {
       name: 'Store 3',
@@ -35,7 +49,14 @@ export class Stores {
       state: 'Karnataka',
       manager: 'xxxxx xxxx',
       phone: '+91 xxxxx xxxxx',
-      status: 'Active'
+      status: 'Active',
+      hubs: [
+        { name: 'Hub 1', city: 'Bengaluru' }
+      ],
+      depots: [
+        { name: 'Depot 1', city: 'Bengaluru' },
+        { name: 'Depot 2', city: 'Bengaluru' }
+      ]
     }
   ];
 

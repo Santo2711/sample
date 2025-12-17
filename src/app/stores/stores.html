@@ -50,6 +50,24 @@
         </div>
       </div>
 
+      <div class="linked-section">
+        <h3>Linked Stores</h3>
+        <ul>
+          <li *ngFor="let hub of store.hubs">
+            {{ hub.name }} – {{ hub.city }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="linked-section">
+        <h3>Linked Depots</h3>
+        <ul>
+          <li *ngFor="let depot of store.depots">
+            {{ depot.name }} – {{ depot.city }}
+          </li>
+        </ul>
+      </div>
+
       <button class="view-btn">View Details</button>
     </div>
 

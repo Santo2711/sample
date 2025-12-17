@@ -1,11 +1,72 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-hubs',
-  imports: [],
+  imports: [FormsModule,CommonModule],
   templateUrl: './hubs.html',
   styleUrl: './hubs.css',
 })
 export class Hubs {
 
+  
+  searchText = '';
+
+  hubs = [
+    {
+      name: 'Hub 1',
+      city: 'Chennai',
+      state: 'Tamil Nadu',
+      manager: 'xxxxx xxxx',
+      phone: '+91 xxxxx xxxxx',
+      status: 'Active',
+      stores: [
+        { name: 'Store 1', city: 'Chennai' },
+        { name: 'Store 2', city: 'Chennai' }
+      ],
+      depots: [
+        { name: 'Depot', city: 'Chennai' }
+      ]
+    },
+    {
+      name: 'Hub 2',
+      city: 'Hyderabad',
+      state: 'Andhra Pradesh',
+      manager: 'xxxxx xxxx',
+      phone: '+91 xxxxx xxxxx',
+      status: 'Active',
+      stores: [
+        { name: 'Store 1', city: 'Hyderabad' },
+        { name: 'Store 2', city: 'Hyderabad' }
+      ],
+      depots: [
+        { name: 'Depot', city: 'Hyderabad' }
+      ]
+    },
+    {
+      name: 'Hub 3',
+      city: 'Bengaluru',
+      state: 'Karnataka',
+      manager: 'xxxxx xxxx',
+      phone: '+91 xxxxx xxxxx',
+      status: 'Active',
+      stores: [
+        { name: 'Store 1', city: 'Bengaluru' }
+      ],
+      depots: [
+        { name: 'Depot 1', city: 'Bengaluru' },
+        { name: 'Depot 2', city: 'Bengaluru' }
+      ]
+    }
+  ];
+
+  filteredHubs() {
+    return this.hubs.filter(hub =>
+      hub.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
+      hub.city.toLowerCase().includes(this.searchText.toLowerCase())
+    );
+  }
 }
+
+

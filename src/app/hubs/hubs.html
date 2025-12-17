@@ -1,1 +1,68 @@
-<p>hubs works!</p>
+<div class="hub-wrapper">
+
+  <div class="hub-header">
+    <h1>Distribution Hubs</h1>
+    <p>Central hubs with linked stores and depots</p>
+  </div>
+
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search hub by name or city"
+      [(ngModel)]="searchText"
+    />
+  </div>
+
+  <div class="hub-grid">
+
+    <div class="hub-card" *ngFor="let hub of filteredHubs()">
+
+      <div class="hub-info">
+        <h2>{{ hub.name }}</h2>
+        <p class="location">{{ hub.city }}, {{ hub.state }}</p>
+
+        <div class="hub-meta">
+          <div>
+            <span class="label">Manager</span>
+            <span>{{ hub.manager }}</span>
+          </div>
+          <div>
+            <span class="label">Contact</span>
+            <span>{{ hub.phone }}</span>
+          </div>
+          <div>
+            <span class="label">Status</span>
+            <span
+              class="status"
+              [class.active]="hub.status === 'Active'"
+              [class.inactive]="hub.status === 'Inactive'"
+            >
+              {{ hub.status }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="linked-section">
+        <h3>Linked Stores</h3>
+        <ul>
+          <li *ngFor="let store of hub.stores">
+            {{ store.name }} – {{ store.city }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="linked-section">
+        <h3>Linked Depots</h3>
+        <ul>
+          <li *ngFor="let depot of hub.depots">
+            {{ depot.name }} – {{ depot.city }}
+          </li>
+        </ul>
+      </div>
+
+      <button class="view-btn">View Hub Details</button>
+    </div>
+
+  </div>
+</div>
