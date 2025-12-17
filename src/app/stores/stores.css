@@ -1,0 +1,132 @@
+.store-wrapper {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+.store-header {
+  background: linear-gradient(135deg, #c671f7, #2d5481);
+  color: #ffffff;
+  padding: 45px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.store-header h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.store-header p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+
+.search-container {
+  max-width: 600px;
+  margin: 0px auto 0px;
+  padding: 0 10px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #1f3c88;
+}
+
+.store-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+.store-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.store-card h2 {
+  font-size: 20px;
+  color: #1f3c88;
+  margin-bottom: 6px;
+}
+
+.store-location {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+
+.store-details div {
+  margin-bottom: 10px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #274c77;
+}
+
+.store-details span {
+  font-size: 14px;
+  color: #444;
+}
+
+
+.status {
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status.active {
+  background-color: #e8f6ef;
+  color: #1e8449;
+}
+
+.status.inactive {
+  background-color: #fdecea;
+  color: #922b21;
+}
+
+
+.view-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #1f3c88;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background-color: #163172;
+}

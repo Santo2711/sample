@@ -1,1 +1,57 @@
-<p>stores works!</p>
+<div class="store-wrapper">
+
+  <div class="store-header">
+    <h1>Store List</h1>
+    <p>Search and manage all registered stores</p>
+
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search by store name, city, or manager"
+      [(ngModel)]="searchText"
+    />
+  </div>
+  </div>
+
+  
+
+  <div class="store-grid">
+
+    <div
+      class="store-card"
+      *ngFor="let store of filteredStores()"
+    >
+      <h2>{{ store.name }}</h2>
+
+      <p class="store-location">
+        {{ store.city }}, {{ store.state }}
+      </p>
+
+      <div class="store-details">
+        <div>
+          <span class="label">Manager</span>
+          <span>{{ store.manager }}</span>
+        </div>
+
+        <div>
+          <span class="label">Contact</span>
+          <span>{{ store.phone }}</span>
+        </div>
+
+        <div>
+          <span class="label">Status</span>
+          <span
+            class="status"
+            [class.active]="store.status === 'Active'"
+            [class.inactive]="store.status === 'Inactive'"
+          >
+            {{ store.status }}
+          </span>
+        </div>
+      </div>
+
+      <button class="view-btn">View Details</button>
+    </div>
+
+  </div>
+</div>
